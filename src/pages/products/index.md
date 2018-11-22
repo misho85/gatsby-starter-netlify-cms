@@ -1,7 +1,7 @@
 ---
 templateKey: product-page
 title: Nasha stvar
-image: /img/jumbotron.jpg
+image: /img/bazen-unsplash.jpg
 heading: Shta nudimo
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
