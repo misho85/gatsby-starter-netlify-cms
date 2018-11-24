@@ -2,6 +2,10 @@ import React from 'react';
 import { navigateTo } from 'gatsby-link';
 import Layout from '../../components/Layout';
 
+const API_KEY = 'AIzaSyAN3X4HRawnvyPOaZRdmejAlHdZjzG30-E';
+const adresa = 'place_id:ChIJfXAOdyJlWkcRkDA2l7qf9SI';
+const _url = `https://www.google.com/maps/embed/v1/place?q=${adresa}&key=${API_KEY}`;
+
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -36,6 +40,17 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
+        <iframe
+          title="Mapa"
+          frameBorder="0"
+          style={{
+            width: '100%',
+            height: '50vh',
+            paddingTop: '3rem'
+          }}
+          src={_url}
+          allowFullScreen
+        />
         <section className="section">
           <div className="columns">
             <div className="column is-10 is-offset-1">
