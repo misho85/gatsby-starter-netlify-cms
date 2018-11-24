@@ -118,7 +118,7 @@ export default class Index extends React.Component {
                             className="textarea"
                             name={'message'}
                             onChange={this.handleChange}
-                            id={'email'}
+                            id={'message'}
                             required={'true'}
                           />
                         </div>
