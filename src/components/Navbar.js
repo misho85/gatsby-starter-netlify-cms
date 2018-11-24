@@ -46,6 +46,9 @@ class Navbar extends Component {
             id="navMenu"
           >
             <div className="navbar-end">
+              <Link className="navbar-item" to="/tester">
+                Test
+              </Link>
               <Link className="navbar-item" to="/about">
                 About
               </Link>
