@@ -6,8 +6,14 @@ const Footer = () => {
     <>
       <footer className="footer">
         <div className="container">
-          <div className="content has-text-centered">
-            <p>{config.siteTitle}</p>
+          <div className="columns">
+            <div className="column is-one-third">
+              <p>{config.siteTitle}</p>
+            </div>
+            <div className="column is-one-third" />
+            <div className="column is-one-third">
+              <p>{config.siteDescription}</p>
+            </div>
           </div>
         </div>
       </footer>
