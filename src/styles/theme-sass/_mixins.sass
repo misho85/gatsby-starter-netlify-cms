@@ -1,0 +1,10 @@
+/**
+ * -----------------------------------------
+ *  HACK TO APPLY RULES ONLY TO FIREFOX
+ * -----------------------------------------
+ */
+=firefox-only
+  @at-root
+    @-moz-document url-prefix()
+      &
+        @content

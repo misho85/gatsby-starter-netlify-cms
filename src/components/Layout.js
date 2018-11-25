@@ -3,7 +3,8 @@ import Helmet from 'react-helmet';
 
 import Navbar from '../components/Navbar';
 import Footer from './Footer';
-import './all.sass';
+import '../styles/app.sass';
+// import '../styles/all.sass';
 import config from '../../meta/config';
 
 const TemplateWrapper = ({ children }) => (
