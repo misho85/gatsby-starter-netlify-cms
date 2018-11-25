@@ -3,13 +3,22 @@ import config from '../../meta/config';
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="container">
-        <div className="content has-text-centered">
-          <p>{config.copyright}</p>
+    <>
+      <footer className="footer">
+        <div className="container">
+          <div className="content has-text-centered">
+            <p>{config.siteTitle}</p>
+          </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+      <footer className="subfooter">
+        <div className="container">
+          <div className="content has-text-centered">
+            <p>{config.copyright}</p>
+          </div>
+        </div>
+      </footer>
+    </>
   );
 };
 
