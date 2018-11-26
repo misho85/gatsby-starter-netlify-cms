@@ -3,17 +3,11 @@ import Layout from '../components/Layout';
 
 const HomePage = () => (
   <Layout>
-    <section className="hero is-primary is-bold is-large">
+    <section className="hero is-primary is-bold is-fullheight">
       <div className="hero-body">
-        <div className="container">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="section is-centered">
-                <h1 className="title">Home Page</h1>
-                <h2 className="subtitle">Pochetna strana</h2>
-              </div>
-            </div>
-          </div>
+        <div className="container has-text-centered">
+          <h1 className="title">Home Page</h1>
+          <h2 className="subtitle">Pochetna strana</h2>
         </div>
       </div>
     </section>
