@@ -17,47 +17,36 @@ export default class IndexPage extends React.Component {
             </div>
           </div>
         </section>
-        <section className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="section">
-                <div className="container">
-                  <div className="container">
-                    {posts.map(({ node: post }) => (
-                      <div
-                        className="content"
-                        style={{
-                          border: '1px solid #eaecee',
-                          padding: '2em 4em'
-                        }}
-                        key={post.id}
-                      >
-                        <p>
-                          <Link
-                            className="has-text-primary"
-                            to={post.fields.slug}
-                          >
-                            {post.frontmatter.title}
-                          </Link>
-                          <span> &bull; </span>
-                          <small>{post.frontmatter.date}</small>
-                        </p>
-                        <p>
-                          {post.excerpt}
-                          <br />
-                          <br />
-                          <Link
-                            className="button is-small"
-                            to={post.fields.slug}
-                          >
-                            Keep Reading →
-                          </Link>
-                        </p>
+        <section className="section has-background-blue-lighter">
+          <div className="container">
+            <div className="columns is-multiline is-desktop">
+              {posts.map(({ node: post }) => (
+                <div className="column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
+                  <Link to={post.fields.slug}>
+                    <div class="card is-shady" key={post.id}>
+                      <div class="card-image">
+                        <figure class="image is-4by3">
+                          <img
+                            src="https://source.unsplash.com/random"
+                            alt="Placeholder"
+                          />
+                        </figure>
                       </div>
-                    ))}
-                  </div>
+                      <div class="card-content">
+                        <div class="content">
+                          <h4>{post.frontmatter.title}</h4>
+                          <p>
+                            {post.excerpt}
+                            <br />
+                            <br />
+                            <small>{post.frontmatter.date}</small>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -82,7 +71,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 200)
           id
           fields {
             slug
