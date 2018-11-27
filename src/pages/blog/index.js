@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../../components/Layout';
-{
-  /* <div className="column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd"></div> */
-}
+
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
