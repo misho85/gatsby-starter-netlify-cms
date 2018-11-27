@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../../components/Layout';
-
+{
+  /* <div className="column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd"></div> */
+}
 export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props;
@@ -19,13 +21,13 @@ export default class IndexPage extends React.Component {
         </section>
         <section className="section has-background-blue-lighter">
           <div className="container">
-            <div className="columns is-multiline is-desktop">
+            <div className="columns is-multiline">
               {posts.map(({ node: post }) => (
-                <div className="column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
+                <div className="column is-half-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
                   <Link to={post.fields.slug}>
-                    <div class="card is-shady" key={post.id}>
+                    <div class="card is-shady is-fullheight" key={post.id}>
                       <div class="card-image">
-                        <figure class="image is-4by3">
+                        <figure class="image is-16by9">
                           <img
                             src="https://source.unsplash.com/random"
                             alt="Placeholder"
@@ -71,7 +73,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 200)
+          excerpt(pruneLength: 100)
           id
           fields {
             slug
