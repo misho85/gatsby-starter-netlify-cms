@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter'
+    title: 'Gatsby + Netlify CMS Starter',
+    siteUrl: `https://www.example.com`
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -26,6 +27,9 @@ module.exports = {
         path: `${__dirname}/src/img`,
         name: 'images'
       }
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
