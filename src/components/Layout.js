@@ -5,13 +5,13 @@ import Navbar from '../components/Navbar';
 import Footer from './Footer';
 import '../styles/app.sass';
 // import '../styles/all.sass';
-import config from '../../meta/config';
+import { _title, description } from '../../config/website';
 
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet>
-      <title>{config.siteTitle}</title>
-      <meta name="description" content={config.siteDescription} />
+      <title>{_title}</title>
+      <meta name="description" content={description} />
     </Helmet>
     <Navbar />
     <div>{children}</div>
