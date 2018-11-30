@@ -1,5 +1,5 @@
 import React from 'react';
-import config from '../../meta/config';
+import { _title, description, copyright } from '../../config/website';
 
 const Footer = () => {
   return (
@@ -8,11 +8,11 @@ const Footer = () => {
         <div className="container">
           <div className="columns">
             <div className="column is-one-third">
-              <p>{config.siteTitle}</p>
+              <p>{_title}</p>
             </div>
             <div className="column is-one-third" />
             <div className="column is-one-third">
-              <p>{config.siteDescription}</p>
+              <p>{description}</p>
             </div>
           </div>
         </div>
@@ -20,7 +20,7 @@ const Footer = () => {
       <footer className="subfooter">
         <div className="container">
           <div className="content has-text-centered">
-            <p>{config.copyright}</p>
+            <p>{copyright}</p>
           </div>
         </div>
       </footer>
