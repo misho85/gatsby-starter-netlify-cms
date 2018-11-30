@@ -1,8 +1,42 @@
+const {
+  _pathPrefix,
+  _title,
+  _titleAlt,
+  _titleTemplate,
+  _url,
+  description,
+  author,
+  copyright,
+  logo,
+  favicon,
+  siteLanguage,
+  shortName,
+  themeColor,
+  backgroundColor,
+  twitter,
+  fbAppID,
+  gTagID
+} = require('./config/website');
+
 module.exports = {
+  pathPrefix: _pathPrefix,
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
-    siteUrl: `https://www.example.com`
+    title: _title,
+    titleAlt: _titleAlt,
+    titleTemplate: _titleTemplate,
+    shortName,
+    url: _url,
+    siteUrl: _url + _pathPrefix, // For gatsby-plugin-sitemap
+    siteLanguage,
+    logo, // Logo for JSONLD
+    description,
+    banner: logo,
+    author,
+    copyright,
+    twitter,
+    fbAppID
   },
+  /* Plugins */
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
@@ -65,7 +99,7 @@ module.exports = {
       resolve: `gatsby-plugin-gtag`,
       options: {
         // your google analytics tracking id
-        trackingId: `UA-130093402-1`,
+        trackingId: gTagID,
         // Puts tracking script in the head instead of the body
         head: false,
         // enable ip anonymization
