@@ -13,9 +13,8 @@ module.exports = {
   ogLanguage: 'en_US',
   twitter: '@mishoTwiter', // Twitter Username
   author: 'Miso Stevovic',
-  favicon: 'src/favicon.png', // Used for manifest favicon generation
   shortName: 'Agencija', // shortname for manifest. MUST be shorter than 12 characters
-  themeColor: '#00d1b2', // Used for setting manifest and progress theme colors.
-  backgroundColor: '#ffffff', // Used for setting manifest background color.
+  themeColor: '#fff', // Used for setting manifest and progress theme colors.
+  backgroundColor: '#293541', // Used for setting manifest background color.
   copyright: 'Copyright © Gatsby Test Agencija 2018. All Rights Reserved.' // Copyright string for the footer of the website and RSS feed.
 };

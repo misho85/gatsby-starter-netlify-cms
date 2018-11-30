@@ -8,7 +8,6 @@ const {
   author,
   copyright,
   logo,
-  favicon,
   siteLanguage,
   shortName,
   themeColor,
