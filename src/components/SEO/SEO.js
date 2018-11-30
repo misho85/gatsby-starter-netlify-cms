@@ -10,6 +10,7 @@ const SEO = ({ title, desc, banner, pathname, article }) => (
       query SEO {
         site {
           buildTime(formatString: "YYYY-MM-DD")
+          pathPrefix
           siteMetadata {
             defaultTitle: title
             titleAlt
@@ -18,7 +19,6 @@ const SEO = ({ title, desc, banner, pathname, article }) => (
             siteLanguage
             logo
             siteUrl: url
-            pathPrefix
             defaultDescription: description
             defaultBanner: banner
             twitter
@@ -30,6 +30,7 @@ const SEO = ({ title, desc, banner, pathname, article }) => (
     render={({
       site: {
         buildTime,
+        pathPrefix,
         siteMetadata: {
           defaultTitle,
           titleAlt,
@@ -38,7 +39,6 @@ const SEO = ({ title, desc, banner, pathname, article }) => (
           siteLanguage,
           logo,
           siteUrl,
-          pathPrefix,
           defaultDescription,
           defaultBanner,
           twitter,
