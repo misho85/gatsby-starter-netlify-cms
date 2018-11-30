@@ -106,6 +106,19 @@ module.exports = {
         anonymize: true
       }
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: _title,
+        short_name: shortName,
+        start_url: '/',
+        background_color: backgroundColor,
+        theme_color: themeColor,
+        display: 'standalone',
+        icon: 'src/img/icon.png'
+      }
+    },
+    `gatsby-plugin-offline`,
     'gatsby-plugin-netlify' // make sure to keep it last in the array
   ]
 };
