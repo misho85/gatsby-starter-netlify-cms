@@ -2,9 +2,8 @@ import React from 'react';
 import { navigateTo } from 'gatsby-link';
 import Layout from '../../components/Layout';
 
-const API_KEY = 'AIzaSyAN3X4HRawnvyPOaZRdmejAlHdZjzG30-E';
-const adresa = 'place_id:ChIJfXAOdyJlWkcRkDA2l7qf9SI';
-const _url = `https://www.google.com/maps/embed/v1/place?q=${adresa}&key=${API_KEY}`;
+const map =
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.9306571106954!2d20.450474095748987!3d44.82297730169373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb73bbff29e600816!2z0J_QvtCx0LXQtNC90LjQug!5e0!3m2!1ssr!2srs!4v1544204965250';
 
 function encode(data) {
   return Object.keys(data)
@@ -48,7 +47,7 @@ export default class Index extends React.Component {
             height: '50vh',
             paddingTop: '3rem'
           }}
-          src={_url}
+          src={map}
           allowFullScreen
         />
         <section className="section">
