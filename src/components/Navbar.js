@@ -55,7 +55,9 @@ class Navbar extends Component {
               <Link className="navbar-item" to="/blog">
                 Blog
               </Link>
-
+              <Link className="navbar-item" to="/test">
+                TestPage
+              </Link>
               <div className="navbar-item">
                 <div className="field is-grouped">
                   <p className="control">
