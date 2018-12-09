@@ -16,5 +16,8 @@ module.exports = {
   shortName: 'Agencija', // shortname for manifest. MUST be shorter than 12 characters
   themeColor: '#fff', // Used for setting manifest and progress theme colors.
   backgroundColor: '#293541', // Used for setting manifest background color.
-  copyright: 'Copyright © Gatsby Test Agencija 2018. All Rights Reserved.' // Copyright string for the footer of the website and RSS feed.
+  copyright: 'Copyright © Gatsby Test Agencija 2018. All Rights Reserved.', // Copyright string for the footer of the website and RSS feed.
+  // cordinates of mapbox marker
+  _latitude: 44.812898,
+  _longitude: 20.460539
 };
