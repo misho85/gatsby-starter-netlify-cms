@@ -12,10 +12,7 @@ function encode(data) {
 }
 
 export default class Index extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { isValidated: false };
-  }
+  state = { isValidated: false };
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -89,7 +86,7 @@ export default class Index extends React.Component {
                             name={'name'}
                             onChange={this.handleChange}
                             id={'name'}
-                            required={'true'}
+                            required={true}
                           />
                         </div>
                       </div>
@@ -104,7 +101,7 @@ export default class Index extends React.Component {
                             name={'email'}
                             onChange={this.handleChange}
                             id={'email'}
-                            required={'true'}
+                            required={true}
                           />
                         </div>
                       </div>
@@ -118,7 +115,7 @@ export default class Index extends React.Component {
                             name={'message'}
                             onChange={this.handleChange}
                             id={'message'}
-                            required={'true'}
+                            required={true}
                           />
                         </div>
                       </div>
