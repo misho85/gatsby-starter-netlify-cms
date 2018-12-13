@@ -34,12 +34,12 @@ export default ({
         paddingLeft: '15px'
       }}
     >
-      <a
+      <button
         className="button is-small is-outlined is-rounded is-primary"
         onClick={styleChange}
       >
         {styleId === 'light' ? 'dark' : 'light'} theme
-      </a>
+      </button>
     </div>
     <div
       className="icon"

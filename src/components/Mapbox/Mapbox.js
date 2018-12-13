@@ -30,6 +30,7 @@ export default class Mapbox extends Component {
 
   render() {
     const { viewport, styleId } = this.state;
+    const { fullScreen, goFull } = this.props;
     return (
       <ReactMapGL
         {...viewport}
@@ -37,7 +38,7 @@ export default class Mapbox extends Component {
         width="100%"
         height="100%"
         maxZoom={17.5}
-        scrollZoom={false}
+        scrollZoom={fullScreen}
         mapStyle={`mapbox://styles/mapbox/${styleId}-v9`}
         onViewportChange={this.onViewportChange}
       >
@@ -47,8 +48,8 @@ export default class Mapbox extends Component {
         <NavControl
           styleChange={this.onButtonClick}
           onViewportChange={this.onViewportChange}
-          goFull={this.props.goFull}
-          fullScreen={this.props.fullScreen}
+          goFull={goFull}
+          fullScreen={fullScreen}
           styleId={styleId}
         />
       </ReactMapGL>
