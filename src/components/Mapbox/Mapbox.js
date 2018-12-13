@@ -47,6 +47,9 @@ export default class Mapbox extends Component {
         <NavControl
           styleChange={this.onButtonClick}
           onViewportChange={this.onViewportChange}
+          goFull={this.props.goFull}
+          fullScreen={this.props.fullScreen}
+          styleId={styleId}
         />
       </ReactMapGL>
     );

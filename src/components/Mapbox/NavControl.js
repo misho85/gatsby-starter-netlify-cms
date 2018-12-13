@@ -3,7 +3,13 @@ import { NavigationControl } from 'react-map-gl';
 import screenFull from '../../img/screen-full.svg';
 import screenNormal from '../../img/screen-normal.svg';
 
-export default ({ styleChange, onViewportChange }) => (
+export default ({
+  styleChange,
+  onViewportChange,
+  goFull,
+  fullScreen,
+  styleId
+}) => (
   <>
     <div
       style={{
@@ -11,7 +17,7 @@ export default ({ styleChange, onViewportChange }) => (
         right: 0,
         bottom: 0,
         paddingBottom: '40px',
-        paddingRight: '10px'
+        paddingRight: '15px'
       }}
     >
       <NavigationControl
@@ -24,11 +30,16 @@ export default ({ styleChange, onViewportChange }) => (
         position: 'absolute',
         left: 0,
         top: 0,
-        paddingTop: '10px',
-        paddingLeft: '10px'
+        paddingTop: '15px',
+        paddingLeft: '15px'
       }}
     >
-      <button onClick={styleChange}>light/dark</button>
+      <a
+        className="button is-small is-outlined is-rounded is-primary"
+        onClick={styleChange}
+      >
+        {styleId === 'light' ? 'dark' : 'light'} theme
+      </a>
     </div>
     <div
       className="icon"
@@ -36,13 +47,23 @@ export default ({ styleChange, onViewportChange }) => (
         position: 'absolute',
         right: 0,
         top: 0,
-        paddingTop: '25px',
-        paddingRight: '15px'
+        paddingTop: '30px',
+        paddingRight: '30px'
       }}
     >
-      <button>
+      <button
+        onClick={goFull}
+        style={{
+          width: '30px',
+          height: '30px',
+          outline: 'none',
+          border: 0,
+          backgroundColor: 'transparent',
+          cursor: 'pointer'
+        }}
+      >
         <span className="icon">
-          <img src={screenFull} alt="fullScreen" />
+          <img src={fullScreen ? screenNormal : screenFull} alt="fullScreen" />
         </span>
       </button>
     </div>

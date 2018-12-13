@@ -2,6 +2,7 @@ import React from 'react';
 import { navigateTo } from 'gatsby-link';
 import Layout from '../../components/Layout';
 import Mapbox from '../../components/Mapbox/Mapbox';
+import Fullscreen from 'react-full-screen';
 
 function encode(data) {
   return Object.keys(data)
@@ -11,7 +12,12 @@ function encode(data) {
 
 export default class Test extends React.Component {
   state = {
-    isValidated: false
+    isValidated: false,
+    isFull: false
+  };
+
+  goFull = () => {
+    this.setState(prevState => ({ isFull: !prevState.isFull }));
   };
 
   handleChange = e => {
@@ -36,9 +42,14 @@ export default class Test extends React.Component {
   render() {
     return (
       <Layout>
-        <div className="full-width-map-container">
-          <Mapbox />
-        </div>
+        <Fullscreen
+          enabled={this.state.isFull}
+          onChange={isFull => this.setState({ isFull })}
+        >
+          <div className="full-width-map-container full-screenable-node">
+            <Mapbox goFull={this.goFull} fullScreen={this.state.isFull} />
+          </div>
+        </Fullscreen>
         <section className="section">
           <div className="columns">
             <div className="column is-10 is-offset-1">
