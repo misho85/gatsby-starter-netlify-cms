@@ -23,17 +23,17 @@ export default class IndexPage extends React.Component {
               {posts.map(({ node: post }) => (
                 <div className="column is-half-tablet is-half-desktop is-one-third-widescreen is-one-quarter-fullhd">
                   <Link to={post.fields.slug}>
-                    <div class="card is-shady is-fullheight" key={post.id}>
-                      <div class="card-image">
-                        <figure class="image is-16by9">
+                    <div className="card is-shady is-fullheight" key={post.id}>
+                      <div className="card-image">
+                        <figure className="image is-16by9">
                           <img
                             src="https://source.unsplash.com/random"
                             alt="Placeholder"
                           />
                         </figure>
                       </div>
-                      <div class="card-content">
-                        <div class="content">
+                      <div className="card-content">
+                        <div className="content">
                           <h4>{post.frontmatter.title}</h4>
                           <p>
                             {post.excerpt}
