@@ -8,11 +8,7 @@ class Navbar extends Component {
   };
 
   toggleDropdown = () => {
-    const toggledIsActive = this.state.isActive ? false : true;
-
-    this.setState({
-      isActive: toggledIsActive
-    });
+    this.setState(prevState => ({ isActive: !prevState.isActive }));
   };
 
   render() {
@@ -59,16 +55,9 @@ class Navbar extends Component {
                 TestPage
               </Link>
               <div className="navbar-item">
-                <div className="field is-grouped">
-                  <p className="control">
-                    <Link
-                      className="button is-primary is-outlined"
-                      to="/contact"
-                    >
-                      Contact
-                    </Link>
-                  </p>
-                </div>
+                <Link className="button is-primary is-outlined" to="/contact">
+                  Contact
+                </Link>
               </div>
             </div>
           </div>
